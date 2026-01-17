@@ -1,5 +1,6 @@
 from telethon import events
 from app.formatter import format_message
+from app.ai.extraction_agent import extract_technical_jobs
 
 
 def register_group_listener(client, group_id):
@@ -15,7 +16,5 @@ def register_group_listener(client, group_id):
 
         formatted_text = format_message(event.message.text)
 
-        print("\n" + "=" * 60)
-        print("NEW MESSAGE RECEIVED")
-        print("=" * 60)
-        print(formatted_text)
+        data=extract_technical_jobs(formatted_text)
+        print(data)

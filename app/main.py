@@ -15,7 +15,7 @@ async def main():
     #     return messages
     
     # print(await read_group_messages(client,2))
-    register_group_listener(client,1752151569)
+    register_group_listener(client,-1002947896517)
 
     print("NOW LISTENING — DO NOT CLOSE")
     await client.run_until_disconnected()
